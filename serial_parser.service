@@ -1,0 +1,15 @@
+[Unit]
+Description=PiSerialMySensors
+After=network.target
+
+[Service]
+ExecStart=/home/pi/PiSerialMySensors/serial_parser.py
+ExecStop=/usr/bin/killall -9 serial_parser.py
+WorkingDirectory=/home/pi/PiSerialMySensors
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
