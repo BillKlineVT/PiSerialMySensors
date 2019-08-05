@@ -1,0 +1,194 @@
+{
+    "NetworkReceiver": {
+        "type": "NetworkReceiverHttpLib",
+        "port": 8090
+    },
+    "NetworkSender": {
+        "type": "NetworkSenderHttpLib",
+        "ip": "192.168.1.177",
+        "port": 39500
+    },
+    "CompositePeriphs": [],
+    "Devices": [
+        {
+            "triggers": [
+                {
+                    "interval": 60000,
+                    "offset": null,
+                    "command": "poll"
+                }
+            ],
+            "subscriptions": [],
+            "type": "TemperatureMeasurement",
+            "name": "Kegerator_Upper_Zone_Temp",
+            "input": {
+                "type": "CommandParser",
+                "command": "/home/pi/PiSerialMySensors/read_kegerator_upper_zone_temp.sh"
+            }
+        },
+        {
+            "triggers": [
+                {
+                    "interval": 60000,
+                    "offset": null,
+                    "command": "poll"
+                }
+            ],
+            "subscriptions": [],
+            "type": "TemperatureMeasurement",
+            "name": "Kegerator_Lower_Zone_Temp",
+            "input": {
+                "type": "CommandParser",
+                "command": "/home/pi/PiSerialMySensors/read_kegerator_lower_zone_temp.sh"
+            }
+        },
+        {
+            "triggers": [
+                {
+                    "interval": 60000,
+                    "offset": null,
+                    "command": "poll"
+                }
+            ],
+            "subscriptions": [],
+            "type": "TemperatureMeasurement",
+            "name": "Kegerator_Desired_Temp",
+            "input": {
+                "type": "CommandParser",
+                "command": "/home/pi/PiSerialMySensors/read_kegerator_desired_temp.sh"
+            }
+        },
+        {
+            "triggers": [
+                {
+                    "interval": 60000,
+                    "offset": null,
+                    "command": "poll"
+                }
+            ],
+            "subscriptions": [],
+            "type": "TemperatureMeasurement",
+            "name": "Media_Center_Temp",
+            "input": {
+                "type": "CommandParser",
+                "command": "/home/pi/PiSerialMySensors/read_media_center_temp.sh"
+            }
+        },
+        {
+            "triggers": [
+                {
+                    "interval": 60000,
+                    "offset": null,
+                    "command": "poll"
+                }
+            ],
+            "subscriptions": [],
+            "type": "TemperatureMeasurement",
+            "name": "Media_Center_Desired_Temp",
+            "input": {
+                "type": "CommandParser",
+                "command": "/home/pi/PiSerialMySensors/read_media_center_desired_temp.sh"
+            }
+        },
+        {
+            "triggers": [
+                {
+                    "interval": 60000,
+                    "offset": null,
+                    "command": "poll"
+                }
+            ],
+            "subscriptions": [],
+            "type": "SwitchLevel",
+            "name": "Media_Center_HVAC_Mode",
+            "output": {},
+            "initial": 0,
+            "input": {
+                "type": "CommandParser",
+                "command": "/home/pi/PiSerialMySensors/read_media_center_mode.sh"
+            }
+        },
+        {
+            "triggers": [
+                {
+                    "interval": 60000,
+                    "offset": null,
+                    "command": "poll"
+                }
+            ],
+            "subscriptions": [],
+            "type": "SwitchLevel",
+            "name": "Kegerator_HVAC_Mode",
+            "output": {},
+            "initial": 0,
+            "input": {
+                "type": "CommandParser",
+                "command": "/home/pi/PiSerialMySensors/read_kegerator_hvac_mode.sh"
+            }
+        },
+        {
+            "triggers": [
+                {
+                    "interval": 60000,
+                    "offset": null,
+                    "command": "poll"
+                }
+            ],
+            "subscriptions": [],
+            "type": "VoltageMeasurement",
+            "name": "Kegerator_Tap_Left_PulseCount",
+            "input": {
+                "type": "CommandParser",
+                "command": "/home/pi/PiSerialMySensors/read_kegerator_tap_left_pulsecount.sh"
+            }
+        },
+        {
+            "triggers": [
+                {
+                    "interval": 60000,
+                    "offset": null,
+                    "command": "poll"
+                }
+            ],
+            "subscriptions": [],
+            "type": "VoltageMeasurement",
+            "name": "Kegerator_Tap_Mid_Left_PulseCount",
+            "input": {
+                "type": "CommandParser",
+                "command": "/home/pi/PiSerialMySensors/read_kegerator_tap_mid_left_pulsecount.sh"
+            }
+        },
+        {
+            "triggers": [
+                {
+                    "interval": 60000,
+                    "offset": null,
+                    "command": "poll"
+                }
+            ],
+            "subscriptions": [],
+            "type": "VoltageMeasurement",
+            "name": "Kegerator_Tap_Mid_Right_PulseCount",
+            "input": {
+                "type": "CommandParser",
+                "command": "/home/pi/PiSerialMySensors/read_kegerator_tap_mid_right_pulsecount.sh"
+            }
+        },
+        {
+            "triggers": [
+                {
+                    "interval": 60000,
+                    "offset": null,
+                    "command": "poll"
+                }
+            ],
+            "subscriptions": [],
+            "type": "VoltageMeasurement",
+            "name": "Kegerator_Tap_Right_PulseCount",
+            "input": {
+                "type": "CommandParser",
+                "command": "/home/pi/PiSerialMySensors/read_kegerator_tap_right_pulsecount.sh"
+            }
+        }
+    ]
+}
