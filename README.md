@@ -19,3 +19,7 @@ SmartThings iOS app with ST_Anything and OmniThing devices appearing:
 SmartThings OmniThing devices logged using [SmartThings InfluxDB Logger](https://github.com/codersaur/SmartThings/tree/master/smartapps/influxdb-logger) connected to Raspberry Pi-hosted Grafana server:
 
 <img src="https://github.com/BillKlineVT/PiSerialMySensors/blob/master/screenshots/Grafana-SmartThings-OmniThing-MySensors-Integration.JPG" alt="" height="200"/>
+
+Kegerator with SmartThings integration using MySensors node to MySensors Serial Gateway to PiSerialMySensors to OmniThing:
+
+<img src="https://github.com/BillKlineVT/PiSerialMySensors/blob/master/screenshots/Kegerator.jpg" alt="" height="400"/>
