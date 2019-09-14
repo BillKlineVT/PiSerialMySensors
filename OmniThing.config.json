@@ -93,7 +93,7 @@
         {
             "triggers": [
                 {
-                    "interval": 60000,
+                    "interval": 1000,
                     "offset": null,
                     "command": "poll"
                 }
@@ -101,7 +101,11 @@
             "subscriptions": [],
             "type": "SwitchLevel",
             "name": "Media_Center_HVAC_Mode",
-            "output": {},
+            "output": {
+                "type": "CommandExecuterFloat",
+                "command": "echo ${OMNITHING_FLOAT_VAL}",
+                "multithread": null
+            },
             "initial": 0,
             "input": {
                 "type": "CommandParser",
@@ -111,7 +115,7 @@
         {
             "triggers": [
                 {
-                    "interval": 60000,
+                    "interval": 1000,
                     "offset": null,
                     "command": "poll"
                 }
@@ -119,7 +123,11 @@
             "subscriptions": [],
             "type": "SwitchLevel",
             "name": "Kegerator_HVAC_Mode",
-            "output": {},
+            "output": {
+                "type": "CommandExecuterFloat",
+                "command": "echo ${OMNITHING_FLOAT_VAL}",
+                "multithread": null
+            },
             "initial": 0,
             "input": {
                 "type": "CommandParser",
@@ -188,6 +196,22 @@
             "input": {
                 "type": "CommandParser",
                 "command": "/home/pi/PiSerialMySensors/read_kegerator_tap_right_pulsecount.sh"
+            }
+        },
+        {
+            "triggers": [
+                {
+                    "interval": 1000,
+                    "offset": null,
+                    "command": "poll"
+                }
+            ],
+            "subscriptions": [],
+            "type": "TemperatureMeasurement",
+            "name": "Media_Center_HVAC_Mode_1",
+            "input": {
+                "type": "CommandParser",
+                "command": "/home/pi/PiSerialMySensors/read_media_center_mode.sh"
             }
         }
     ]
